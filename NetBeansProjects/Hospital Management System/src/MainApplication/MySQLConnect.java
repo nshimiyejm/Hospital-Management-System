@@ -6,7 +6,7 @@
 package MainApplication;
 
 import java.sql.*;
-import javax.swing.JOptionPane;
+import javax.swing.*;
 
 /**
  *
@@ -15,7 +15,7 @@ import javax.swing.JOptionPane;
 public class MySQLConnect {
     Connection conn = null;
     
-    public static Conncection ConnectDb(){
+    public static Conncetion ConnectDb(){
     
         try{
             Class.forName("com.mysql.jdbc.Driver");
@@ -28,5 +28,6 @@ public class MySQLConnect {
         }
             
     }
-    
+
+  
 }
