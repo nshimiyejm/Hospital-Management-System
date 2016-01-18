@@ -5,7 +5,9 @@
  */
 package MainApplication;
 
-import java.sql.*;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
 import javax.swing.*;
 
 /**
@@ -13,21 +15,21 @@ import javax.swing.*;
  * @author Jean-Marie
  */
 public class MySQLConnect {
-    Connection conn = null;
-    
-    public static Conncetion ConnectDb(){
-    
+    public static void main(String[] args){
+        
         try{
-            Class.forName("com.mysql.jdbc.Driver");
-            Conncetion conn = DriverManager.getConnection("jdbc:mysql://Localhost/health_management_system","root","root");
-            
-            return conn;
-        }catch(Exception e){
-            JOptionPane.showMessageDialog(null, e);
-            return null;
-        }
-            
-    }
+            String host = "jdbc:mysql://localhost:3306/health_management_system";
+            String uName = "root";
+            String uPass = "";
 
+
+            Conncetion conn = DriverManager.getConnection(host, uName, uPass);
+        }
+        catch(Exception e){
+          JOptionPane.showMessageDialog(null, e);
+            
+        }
+    
+    }
   
 }
