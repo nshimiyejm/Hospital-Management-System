@@ -5,10 +5,28 @@
  */
 package MainApplication;
 
+import java.sql.*;
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author Jean-Marie
  */
 public class MySQLConnect {
+    Connection conn = null;
+    
+    public static Conncection ConnectDb(){
+    
+        try{
+            Class.forName("com.mysql.jdbc.Driver");
+            Conncetion conn = DriverManager.getConnection("jdbc:mysql://Localhost/health_management_system","root","root");
+            
+            return conn;
+        }catch(Exception e){
+            JOptionPane.showMessageDialog(null, e);
+            return null;
+        }
+            
+    }
     
 }
