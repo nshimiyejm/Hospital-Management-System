@@ -121,7 +121,7 @@ public class Login_Form extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void formWindowOpened(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowOpened
-        conn = MySQLConnect.ConnectDb();
+        conn = MySQLConnect.main();
     }//GEN-LAST:event_formWindowOpened
 
     
