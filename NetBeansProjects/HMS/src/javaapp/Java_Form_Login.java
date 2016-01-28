@@ -239,7 +239,7 @@ public class Java_Form_Login extends javax.swing.JFrame {
         }
     }                                          
 
-    public static void main(String args[]) {
+    public static void main() {
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
                 if ("Nimbus".equals(info.getName())) {
@@ -252,7 +252,7 @@ public class Java_Form_Login extends javax.swing.JFrame {
         }
         
         java.awt.EventQueue.invokeLater(new Runnable() {
-            @Override
+            //@Override
             public void run() {
                 new Java_Form_Login().setVisible(true);
             }
