@@ -5,6 +5,8 @@
  */
 package javaapp;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author Jean-Marie
@@ -62,6 +64,11 @@ public class Index extends javax.swing.JFrame {
         jMenu1.setText("File");
 
         jMenuExit.setText("Exit");
+        jMenuExit.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuExitActionPerformed(evt);
+            }
+        });
         jMenu1.add(jMenuExit);
 
         jMenuBar1.add(jMenu1);
@@ -96,6 +103,13 @@ public class Index extends javax.swing.JFrame {
         Java_Form_Login.main(); 
         
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jMenuExitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuExitActionPerformed
+        
+      //  JOptionPane.
+        System.exit(0);
+        
+    }//GEN-LAST:event_jMenuExitActionPerformed
 
     /**
      * @param args the command line arguments
