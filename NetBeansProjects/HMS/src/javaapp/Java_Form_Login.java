@@ -41,9 +41,9 @@ public class Java_Form_Login extends javax.swing.JFrame {
         @Override
         public void actionPerformed(ActionEvent e) {
         
-            if(jPanel_Message.getHeight() != 55){
+            if(jPanel_Message.getHeight() != 75){
                 jPanel_Message.setBounds(0,0,Java_Form_Login.this.getSize().width,jPanel_Message.getHeight() + 5);
-                if(jPanel_Message.getHeight() == 55){
+                if(jPanel_Message.getHeight() == 75){
                     timer1.stop();
                 }
             }
@@ -79,7 +79,6 @@ public class Java_Form_Login extends javax.swing.JFrame {
         jPass = new javax.swing.JPasswordField();
         jLabel2 = new javax.swing.JLabel();
         jButton_Login = new javax.swing.JButton();
-        jPanel3 = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -102,7 +101,7 @@ public class Java_Form_Login extends javax.swing.JFrame {
             jPanel_MessageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel_MessageLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel_Message, javax.swing.GroupLayout.DEFAULT_SIZE, 349, Short.MAX_VALUE)
+                .addComponent(jLabel_Message, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jButton_Ok)
                 .addGap(30, 30, 30))
@@ -178,43 +177,28 @@ public class Java_Form_Login extends javax.swing.JFrame {
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGap(26, 26, 26)
                         .addComponent(jButton_Login)))
-                .addContainerGap())
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         jPanel2Layout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {jButton_Login, jCheckBox, jLabel1, jLabel2, jPass, jUser});
-
-        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
-        jPanel3.setLayout(jPanel3Layout);
-        jPanel3Layout.setHorizontalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
-        );
-        jPanel3Layout.setVerticalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 54, Short.MAX_VALUE)
-        );
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jPanel_Message, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+            .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addGap(16, 16, 16))
+                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addComponent(jPanel_Message, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
-                .addGap(53, 53, 53)
-                .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGap(38, 38, 38))
+                .addGap(114, 114, 114)
+                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(37, 37, 37))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -253,6 +237,12 @@ public class Java_Form_Login extends javax.swing.JFrame {
                 jLabel_Message.setText("Login Was Successesfully");
                 jLabel_Message.setForeground(Color.GREEN);
                 timer1.start();
+                
+                dispose();
+                Patient_Form pat = new Patient_Form();
+                
+                Patient_Form.patient();
+                
             }
             else{
                 jLabel_Message.setText("Invalid Username Or Password");
@@ -279,6 +269,7 @@ public class Java_Form_Login extends javax.swing.JFrame {
     }                                          
 
     public static void main() {
+      
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
                 if ("Nimbus".equals(info.getName())) {
@@ -293,6 +284,8 @@ public class Java_Form_Login extends javax.swing.JFrame {
         java.awt.EventQueue.invokeLater(new Runnable() {
             //@Override
             public void run() {
+                
+                
                 new Java_Form_Login().setVisible(true);
             }
         });
@@ -307,7 +300,6 @@ public class Java_Form_Login extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel_Message;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
-    private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel_Message;
     private javax.swing.JPasswordField jPass;
     private javax.swing.JTextField jUser;

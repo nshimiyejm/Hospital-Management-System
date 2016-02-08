@@ -5,6 +5,7 @@
  */
 package javaapp;
 
+import java.awt.event.WindowEvent;
 import javax.swing.JOptionPane;
 
 /**
@@ -36,6 +37,7 @@ public class Index extends javax.swing.JFrame {
         jMenuExit = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setName("Frame0"); // NOI18N
 
         jButton1.setText("Login Here");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -49,7 +51,7 @@ public class Index extends javax.swing.JFrame {
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap(635, Short.MAX_VALUE)
+                .addContainerGap(629, Short.MAX_VALUE)
                 .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
@@ -99,8 +101,13 @@ public class Index extends javax.swing.JFrame {
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
        //When Clicked,this button will open the login form that will give access to 
        //the user  
+        
+        dispose(); // Closes the previous frame 
+        
         new Java_Form_Login();
-        Java_Form_Login.main(); 
+        Java_Form_Login.main();
+        
+        
         
     }//GEN-LAST:event_jButton1ActionPerformed
 
@@ -145,7 +152,7 @@ public class Index extends javax.swing.JFrame {
             }
         });
     }
-
+   
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
     private javax.swing.JMenu jMenu1;
